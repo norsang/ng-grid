@@ -193,7 +193,10 @@
                 var group = groups[y];
 
                 var col = filterCols(cols, group)[0];
-
+                if (col.groupField !== undefined) {
+                    group = col.groupField;
+                }
+                
                 var val = $utils.evalProperty(model, group);
                 val = (val === '' || val === null) ? 'null' : val.toString();
                 if (!ptr[val]) {
