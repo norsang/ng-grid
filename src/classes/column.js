@@ -28,6 +28,9 @@
     self.sortPriority = undefined;
     self.cellFilter = colDef.cellFilter ? colDef.cellFilter : "";
     self.field = colDef.field;
+    if (colDef.groupField !== undefined) {
+        self.groupField = colDef.groupField;
+    }
     self.aggLabelFilter = colDef.aggLabelFilter || colDef.cellFilter;
     self.visible = $utils.isNullOrUndefined(colDef.visible) || colDef.visible;
     self.sortable = false;
