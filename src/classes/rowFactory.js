@@ -198,7 +198,7 @@
                 }
                 
                 var val = $utils.evalProperty(model, group);
-                val = (val === '' || val === null) ? 'null' : val.toString();
+                val = (val === '' || val === null || val === undefined) ? 'null' : val.toString();
                 if (!ptr[val]) {
                     ptr[val] = {};
                 }
